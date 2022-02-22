@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Programando con MP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="style.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="../index.html" class="logo"><strong>Martin</strong> <span style="color:white;">Programing</span></a>
+						<nav>
+							<a href="#menu" style="color:white;">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="../index.html">Inicio</a></li>
+							<li><a href="../programacion.html">Programacion</a></li>
+							<li><a href="../ramas.html">Ramas</a></li>
+							<li><a href="../curiosidades.html">Curiosidades</a></li>
+							<li><a href="../motivacion.html">Motivacion</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="../tem.html" class="button fit">Aprende con Pacheco</a></li>
+							<li><a href="https://paiza.io/es" class="button primary fit">Directo a programar</a></li>
+							<li><a href="../landing.html" class="button fit">Cursos para tomar</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner 
+					<section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+								<h1>Iniciemos a pensar como programadores...</h1>
+							</header>
+							<div class="content">
+								<p>Una actividad está compuesta por dos o más tareas, a la vez que un proceso está compuesto por dos o más actividades. La interacción entre estas actividades es la que determina el desempeño del proceso, por cual para mejorar un proceso o para solucionar un problema específico, es necesario explicar el proceso.
+
+									Es ahí cuando entra el término que veremos "Diagramas de flujo".</p>
+							
+								
+					<ul class="actions">
+									<li><a href="#one" class="button next scrolly">Iniciemos</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+-->
+				<!-- Main -->
+					<body>
+<!-- partial:index.partial.html -->
+<!-- TAB CONTROLLERS -->
+<input id="panel-1-ctrl"
+       class="panel-radios" type="radio" name="tab-radios" checked>
+<input id="panel-2-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-3-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-4-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-5-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<!-- BORRAR EN CASO DE NO-->
+	<input id="panel-6-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+	<!--FIN-->
+<input id="nav-ctrl"
+       class="panel-radios" type="checkbox" name="nav-checkbox">
+
+<header id="introduction">
+  <h1>Operaciones básicas</h1>
+</header>
+
+<!-- TABS LIST -->
+<ul id="tabs-list">
+    <!-- MENU TOGGLE -->
+    <label id="open-nav-label" for="nav-ctrl"></label>
+    <li id="li-for-panel-1">
+      <label class="panel-label"
+             for="panel-1-ctrl">Lectura de datos</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-2">
+      <label class="panel-label"
+             for="panel-2-ctrl">Escritura de datos</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-3">
+      <label class="panel-label"
+             for="panel-3-ctrl"> Asignación</label>
+    </li><!--INLINE-BLOCK FIX
+ -->
+    <label id="close-nav-label" for="nav-ctrl">Cerrar</label>
+</ul>
+
+<!-- THE PANELS -->
+<article id="panels">
+  <div class="container">
+    <section id="panel-1">
+      <main>
+        <h1>Lectura de datos</h1>
+		  <code>/* Programa para sumar dos enteros.
+   @autor Ricardo Ruiz Rodriguez
+*/
+
+#include <stdio.h>
+
+int main(){
+   int operando1, operando2, suma;    /* declaracion de variables */
+
+   printf("Operando1?: ");            /* Solicitud (prompt) */
+   scanf("%d", &operando1);           /* lee el primer operando */
+   printf("Operando2?: ");            /* Solicitud (prompt) */
+   scanf("%d", &operando2);           /* lee el segundo operando */
+   suma = operando1 + operando2;      /* Operacion de suma y asignacion */
+   printf("La suma es %d\n", suma);   /* Imprime suma */
+
+   return 0;
+}</code>
+       <p>El Ejemplo muestra un sencillo programa que lee desde la entrada estándar dos números enteros decimales (los operandos), y los suma. Este ejemplo también se describirá línea a línea.</p>
+<p>   Las líneas 1-7 deberían resultar ahora  familiares, en base a la explicación de un primer programa en C. Por otro lado, la línea 8 presenta un nuevo elemento: la declaración de variables.
+</p><p>
+   La declaración de variables en C puede hacerse al iniciar un bloque ({ ... }) y tiene la siguiente estructura general:</p>
+<code> {
+                tipo_de_dato lista de variables;
+                             .
+                             .
+                             .
+          }</code>
+			  <p>donde tipo_de_dato es alguno de los tipos de datos de C, y la lista de variables es una lista de identificadores separada por comas. En base a lo anterior, la línea 8 está declarando tres variables de tipo entero a través de la palabra reservada int.
+</p><p>Una palabra reservada es una palabra (token) que no puede ser utilizada como identificador y que es propia del lenguaje, lo cual quiere decir que ninguna variable o función (ningún identificador) por ejemplo, puede llamarse “int”.</p>
+   
+<p>Por otro lado, un identificador es una secuencia de caracteres sin espacios que inicia con una letra. Los identificadores sirven para dar nombre a las variables que se declaran y que serán utilizadas dentro de un programa.</p>
+<p>En C existen diferentes tipos de datos: int, float y char son tres de ellos. La idea de tipo de dato se refiere a una categoría de datos pertenecientes a un dominio pero, desde el punto de vista del lenguaje de programación C ¿qué es un tipo de dato?</p>
+   <p>Lo que una computadora almacena en su memoria principal no es otra cosa que una secuencia de bits; pues bien, esa misma secuencia de bits tiene diferentes interpretaciones, y la interpretación específica está en función del tipo de dato al que se refiera.
+</p>
+
+   <p> Considere la siguiente secuencia de bits: 1 1 0 1 0 1 0 1. Suponga que dicho byte representa, como número, al entero decimal 213. Si esta misma secuencia de bits, se interpreta ahora como carácter (char) por ejemplo, podría representar a la hermosa letra 'R' (no es que así sea, es sólo una suposición), mientras que interpretada como un número con punto decimal (float) podría representar al 69.5.</p>
+
+   
+<cemter> <iframe width="560" height="315" src="https://www.youtube.com/embed/A_owGrLrHCs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></cemter>
+ 
+      </main>
+    </section>
+	  
+    <section id="panel-2">
+      <main>
+        <h1>Escritura de datos</h1>
+      <p>para escribir información en la pantalla utilizamos el objeto cout.</p>
+
+<p>¿como utilizar cout en c++?
+el método básico y mas utilizado es:
+</p>
+<code>
+		  cout << " texto que aparecerá en la pantalla "  ;
+
+cout<< variable ;
+</code>
+<p>cuando escribimos, una cadena lleva comillas doble y si es una variable no;para profundizar un poco mas en la escritura y lectura de datos les recomiendo investigar acerca de las secuencias de escape en c++ y los manipuladores de flujo.</p>
+		 <!-- <iframe src="//www.slideshare.net/slideshow/embed_code/key/9cJXYxmYoPuDZo?startSlide=2" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> -->
+
+      </main>
+    </section>
+    <section id="panel-3">
+      <main>
+        <h1>Asignacion</h1><center><iframe width="560" height="315" src="https://www.youtube.com/embed/11iRGpYqERU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+		  
+    </section>
+    
+	  <p>Esta operación es una manera diferente que se utiliza para que una variable reciba un valor de forma directa sin intervención del usuario, o como resultado de la evaluación de una expresión. Para esta operación se utiliza un operador que varía de acuerdo al lenguaje, pero que de forma básica puede ser una flecha con dirección hacia la izquierda.</p>
+	  
+  </div>
+</article>
+<!-- partial -->
+  
+</body>
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

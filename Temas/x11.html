@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Programando con MP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="style.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="../index.html" class="logo"><strong>Martin</strong> <span style="color:white;">Programing</span></a>
+						<nav>
+							<a href="#menu" style="color:white;">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="../index.html">Inicio</a></li>
+							<li><a href="../programacion.html">Programacion</a></li>
+							<li><a href="../ramas.html">Ramas</a></li>
+							<li><a href="../curiosidades.html">Curiosidades</a></li>
+							<li><a href="../motivacion.html">Motivacion</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="../tem.html" class="button fit">Aprende con Pacheco</a></li>
+							<li><a href="https://paiza.io/es" class="button primary fit">Directo a programar</a></li>
+							<li><a href="../landing.html" class="button fit">Cursos para tomar</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner 
+					<section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+								<h1>Iniciemos a pensar como programadores...</h1>
+							</header>
+							<div class="content">
+								<p>Una actividad está compuesta por dos o más tareas, a la vez que un proceso está compuesto por dos o más actividades. La interacción entre estas actividades es la que determina el desempeño del proceso, por cual para mejorar un proceso o para solucionar un problema específico, es necesario explicar el proceso.
+
+									Es ahí cuando entra el término que veremos "Diagramas de flujo".</p>
+							
+								
+					<ul class="actions">
+									<li><a href="#one" class="button next scrolly">Iniciemos</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+-->
+				<!-- Main -->
+					<body>
+<!-- partial:index.partial.html -->
+<!-- TAB CONTROLLERS -->
+<input id="panel-1-ctrl"
+       class="panel-radios" type="radio" name="tab-radios" checked>
+<input id="panel-2-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-3-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-4-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-5-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<!-- BORRAR EN CASO DE NO-->
+	<input id="panel-6-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+	<!--FIN-->
+<input id="nav-ctrl"
+       class="panel-radios" type="checkbox" name="nav-checkbox">
+
+<header id="introduction">
+  <h1>Uniones, manipuladores de bits y enumeraciones</h1>
+</header>
+
+<!-- TABS LIST -->
+<ul id="tabs-list">
+    <!-- MENU TOGGLE -->
+    <label id="open-nav-label" for="nav-ctrl"></label>
+    <li id="li-for-panel-1">
+      <label class="panel-label"
+             for="panel-1-ctrl">Uniones</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-2">
+      <label class="panel-label"
+             for="panel-2-ctrl">Operadores a nivel de bits</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-3">
+      <label class="panel-label"
+             for="panel-3-ctrl">Campos de bits</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-4">
+      <label class="panel-label"
+             for="panel-4-ctrl">Constantes de enumeración</label>
+    </li><!--INLINE-BLOCK FIX
+ -->
+    </li>
+    <label id="close-nav-label" for="nav-ctrl">Cerrar</label>
+</ul>
+
+<!-- THE PANELS -->
+<article id="panels">
+  <div class="container">
+    <section id="panel-1">
+      <main>
+        <h1>Uniones</h1>
+        <div class="texto" style="padding: 8px; margin: 10px; background-color: rgb(192, 201, 210); border: 1px solid rgb(33, 33, 33); color: rgb(236, 236, 236); font-family: Georgia, Verdana, Tahoma, Arial, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Las uniones son un tipo especial de estructuras que permiten almacenar elementos de diferentes tipos en las mismas posiciones de memoria, aunque evidentemente no simult&aacute;neamente.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Sintaxis:</p>
+    <pre class="sintaxis" style='padding: 10px; margin: 0px 0px 5px; font-family: "Courier New", Courier, mono; font-size: 14px; color: rgb(18, 16, 13); background-color: rgb(227, 227, 227); border: 2px solid green;'><b style="padding: 0px; margin: 0px;">union</b> [&lt;identificador&gt;] {   [&lt;tipo&gt; &lt;nombre_variable&gt;[,&lt;nombre_variable&gt;,...]]; } [&lt;variable_union&gt;[,&lt;variable_union&gt;,...];</pre>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">El identificador de la uni&oacute;n es un nombre opcional para referirse a la uni&oacute;n.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Las variables de uni&oacute;n son objetos declarados del tipo de la uni&oacute;n, y su inclusi&oacute;n tambi&eacute;n es opcional.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Sin embargo, como en el caso de las estructuras, al menos uno de estos elementos debe existir, aunque ambos sean opcionales.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">En el interior de una uni&oacute;n, entre las llaves, se pueden definir todos los elementos necesarios, del mismo modo que se declaran los objetos. La particularidad es que cada elemento se almacenar&aacute; comenzando en la misma posici&oacute;n de memoria.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Las uniones pueden referenciarse completas, usando su nombre, como hac&iacute;amos con las estructuras, y tambi&eacute;n se puede acceder a los elementos en el interior de la uni&oacute;n usando el operador de selecci&oacute;n (.), un punto.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Tambi&eacute;n pueden declararse m&aacute;s objetos del tipo de la uni&oacute;n en cualquier parte del programa, de la siguiente forma:</p>
+    <pre class="sintaxis" style='padding: 10px; margin: 0px 0px 5px; font-family: "Courier New", Courier, mono; font-size: 14px; color: rgb(18, 16, 13); background-color: rgb(227, 227, 227); border: 2px solid green;'>[<b style="padding: 0px; margin: 0px;">union</b>] &lt;identifiador_de_uni&oacute;n&gt; &lt;variable&gt;[,&lt;variable&gt;...]; </pre>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">La palabra clave&nbsp;<b style="padding: 0px; margin: 0px;">union</b> es opcional en la declaraci&oacute;n de objetos en C++. Aunque en C es obligatoria.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Ejemplo:</p>
+    <pre class="ejemplo" style='padding: 10px; margin: 0px 0px 5px; font-family: "Courier New", Courier, mono; font-size: 14px; color: rgb(18, 16, 13); max-width: 80em; max-height: 20em; overflow: auto; background-color: rgb(227, 227, 227); border: 2px solid blue;'><span class="prp" style="padding: 0px; margin: 0px; color: rgb(0, 170, 0); font-weight: bold;">#include</span> &lt;iostream&gt;
+<span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">using</span> <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">namespace</span> std; <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">union</span> unEjemplo {    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span> A;    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">char</span> B;    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">double</span> C; } UnionEjemplo; <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span> <i style="padding: 0px; margin: 0px;">main</i>() {    UnionEjemplo.A = 100;    <i style="padding: 0px; margin: 0px;">cout</i> &lt;&lt; UnionEjemplo.A &lt;&lt; <i style="padding: 0px; margin: 0px;">endl</i>;    UnionEjemplo.B = &#39;a&#39;;    <i style="padding: 0px; margin: 0px;">cout</i> &lt;&lt; UnionEjemplo.B &lt;&lt; <i style="padding: 0px; margin: 0px;">endl</i>;    UnionEjemplo.C = 10.32;    <i style="padding: 0px; margin: 0px;">cout</i> &lt;&lt; UnionEjemplo.C &lt;&lt; <i style="padding: 0px; margin: 0px;">endl</i>;    <i style="padding: 0px; margin: 0px;">cout</i> &lt;&lt; &amp;UnionEjemplo.A &lt;&lt; <i style="padding: 0px; margin: 0px;">endl</i>;    <i style="padding: 0px; margin: 0px;">cout</i> &lt;&lt; (<span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">void</span>*)&amp;UnionEjemplo.B &lt;&lt; <i style="padding: 0px; margin: 0px;">endl</i>;    <i style="padding: 0px; margin: 0px;">cout</i> &lt;&lt; &amp;UnionEjemplo.C &lt;&lt; <i style="padding: 0px; margin: 0px;">endl</i>;    <i style="padding: 0px; margin: 0px;">cout</i> &lt;&lt; <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">sizeof</span>(unEjemplo) &lt;&lt; <i style="padding: 0px; margin: 0px;">endl</i>;    <i style="padding: 0px; margin: 0px;">cout</i> &lt;&lt; <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">sizeof</span>(UnionEjemplo.A) &lt;&lt; <i style="padding: 0px; margin: 0px;">endl</i>;    <i style="padding: 0px; margin: 0px;">cout</i> &lt;&lt; <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">sizeof</span>(UnionEjemplo.B) &lt;&lt; <i style="padding: 0px; margin: 0px;">endl</i>;    <i style="padding: 0px; margin: 0px;">cout</i> &lt;&lt; <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">sizeof</span>(UnionEjemplo.C) &lt;&lt; <i style="padding: 0px; margin: 0px;">endl</i>;       <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">return</span> 0; }</pre>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Supongamos que en nuestro ordenador,&nbsp;<b style="padding: 0px; margin: 0px;">int</b> ocupa cuatro bytes,&nbsp;<b style="padding: 0px; margin: 0px;">char</b> un byte y&nbsp;<b style="padding: 0px; margin: 0px;">double</b> ocho bytes. La forma en que se almacena la informaci&oacute;n en la uni&oacute;n del ejemplo ser&iacute;a la siguiente:</p>
+    <table style="padding: 0px; margin: 0px; border-width: 2px; border-style: solid; border-color: rgb(71, 78, 84) rgb(51, 58, 64) rgb(51, 58, 64) rgb(71, 78, 84); table-layout: auto;">
+        <thead>
+            <tr style="padding: 0px; margin: 0px;">
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 0</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 1</th>
+
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 2</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 3</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 4</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 5</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 6</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 7</th>
+            </tr>
+        </thead>
+        <tbody style="padding: 0px; margin: 0px;">
+            <tr style="padding: 0px; margin: 0px;">
+                <td colspan="4" style="padding: 0px; margin: 0px; border-width: 1px; border-style: solid; border-color: rgb(71, 78, 84) rgb(51, 58, 64) rgb(51, 58, 64) rgb(71, 78, 84); color: rgb(18, 16, 13);">A</td>
+            </tr>
+            <tr style="padding: 0px; margin: 0px;">
+                <td style="padding: 0px; margin: 0px; border-width: 1px; border-style: solid; border-color: rgb(71, 78, 84) rgb(51, 58, 64) rgb(51, 58, 64) rgb(71, 78, 84); color: rgb(18, 16, 13);">B</td>
+            </tr>
+            <tr style="padding: 0px; margin: 0px;">
+                <td colspan="8" style="padding: 0px; margin: 0px; border-width: 1px; border-style: solid; border-color: rgb(71, 78, 84) rgb(51, 58, 64) rgb(51, 58, 64) rgb(71, 78, 84); color: rgb(18, 16, 13);">C</td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Por el contrario, los mismos objetos almacenados en una estructura tendr&iacute;an la siguiente disposici&oacute;n:</p>
+    <table style="padding: 0px; margin: 0px; border-width: 2px; border-style: solid; border-color: rgb(71, 78, 84) rgb(51, 58, 64) rgb(51, 58, 64) rgb(71, 78, 84); table-layout: auto;">
+        <thead>
+            <tr style="padding: 0px; margin: 0px;">
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 0</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 1</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 2</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 3</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 4</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 5</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 6</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 7</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 8</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 9</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 10</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 11</th>
+                <th style="padding: 0px; margin: 0px; color: rgb(239, 237, 235); background-color: rgb(51, 58, 64);" width="40px">Byte 12</th>
+            </tr>
+        </thead>
+        <tbody style="padding: 0px; margin: 0px;">
+            <tr style="padding: 0px; margin: 0px;">
+                <td colspan="4" style="padding: 0px; margin: 0px; border-width: 1px; border-style: solid; border-color: rgb(71, 78, 84) rgb(51, 58, 64) rgb(51, 58, 64) rgb(71, 78, 84); color: rgb(18, 16, 13);">A</td>
+                <td style="padding: 0px; margin: 0px; border-width: 1px; border-style: solid; border-color: rgb(71, 78, 84) rgb(51, 58, 64) rgb(51, 58, 64) rgb(71, 78, 84); color: rgb(18, 16, 13);">B</td>
+                <td colspan="8" style="padding: 0px; margin: 0px; border-width: 1px; border-style: solid; border-color: rgb(71, 78, 84) rgb(51, 58, 64) rgb(51, 58, 64) rgb(71, 78, 84); color: rgb(18, 16, 13);">C</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="nota" style="padding: 1em 3em; margin: 0.5em 0px; background-color: rgb(157, 171, 185); border-width: 1px 3px 3px 1px; border-style: solid; border-color: rgb(13, 13, 13); font-size: 15px; color: rgb(18, 16, 13); text-align: justify;"><b style="padding: 0px; margin: 0px; font-weight: bold; font-style: italic; text-decoration: underline;">Nota:</b> Unas notas sobre el ejemplo:<br style="padding: 0px; margin: 0px;">&bull; Observa que hemos hecho un &quot;casting&quot; del puntero al elemento B de la uni&oacute;n. Si no lo hici&eacute;ramos as&iacute;, cout encontrar&iacute;a un puntero a char, que se considera como una cadena, y por defecto intentar&iacute;a imprimir la cadena, pero nosotros queremos imprimir el puntero, as&iacute; que lo convertimos a un puntero de otro tipo.<br style="padding: 0px; margin: 0px;">&bull; Observa que el tama&ntilde;o de la uni&oacute;n es el del elemento m&aacute;s grande.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Veamos otro ejemplo, pero &eacute;ste m&aacute;s pr&aacute;ctico. Algunas veces tenemos estructuras que son elementos del mismo tipo, por ejemplo X, Y, y Z todos enteros. Pero en determinadas circunstancias, puede convenirnos acceder a ellos como si fueran un&nbsp;<i style="padding: 0px; margin: 0px;">array</i>: Coor[0], Coor[1] y Coor[2]. En este caso, la uni&oacute;n puede resultar &uacute;til:</p>
+    <pre class="ejemplo" style='padding: 10px; margin: 0px 0px 5px; font-family: "Courier New", Courier, mono; font-size: 14px; color: rgb(18, 16, 13); max-width: 80em; max-height: 20em; overflow: auto; background-color: rgb(227, 227, 227); border: 2px solid blue;'><span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">struct</span> stCoor3D {    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span> X, Y, Z; }; <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">union</span> unCoor3D {    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">struct</span> stCoor3D N;    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span> Coor[3]; } Punto;</pre>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Con estas declaraciones, en nuestros programas podremos referirnos a la coordenada Y de estas dos formas:</p>
+    <pre class="ejemplo" style='padding: 10px; margin: 0px 0px 5px; font-family: "Courier New", Courier, mono; font-size: 14px; color: rgb(18, 16, 13); max-width: 80em; max-height: 20em; overflow: auto; background-color: rgb(227, 227, 227); border: 2px solid blue;'>Punto.N.Y Punto.Coor[1]</pre><a name="UNI_Anon" style="padding: 0px; margin: 0px;"></a>
+</div>
+<div class="texto" style="padding: 8px; margin: 10px; background-color: rgb(192, 201, 210); border: 1px solid rgb(33, 33, 33); color: rgb(236, 236, 236); font-family: Georgia, Verdana, Tahoma, Arial, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+    <h2 style='padding: 0px 0px 0px 50px; margin: 0px; background-image: url("./estilo/h2.php?col=565d63FD6b00"); background-repeat: repeat-x; background-position: 0px 0px; height: 28px; font-size: 16px; font-weight: 600; overflow: hidden; color: rgb(179, 222, 255);'>Estructuras an&oacute;nimas</h2>
+    <div class="titulo_flecha" style="padding: 0px; margin: 0px;"><a href="http://c.conclase.net/curso/?cap=016#inicio" style='padding: 0px; margin: 2px 0px -21px; background-image: url("./estilo/boton_inicio.php?col=565d63FD6b00"); background-repeat: no-repeat; background-position: 0px 0px; font-weight: 100; font-size: 0px; text-decoration: none; line-height: 0px; overflow: hidden; position: relative; top: -29px; left: 5px; width: 35px; height: 23px; display: block; color: rgb(18, 16, 13);'>^</a></div>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Como ya vimos en el cap&iacute;tulo sobre estructuras, una&nbsp;<a href="http://c.conclase.net/curso/?cap=011b#STR_Anonimas" style="padding: 0px; margin: 0px; color: rgb(18, 16, 13);">estructura an&oacute;nima</a> es la que carece de identificador de tipo de estructura y de identificador de variables del tipo de estructura.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Por ejemplo, la misma uni&oacute;n del &uacute;ltimo ejemplo puede declararse de este otro modo:</p>
+    <pre class="ejemplo" style='padding: 10px; margin: 0px 0px 5px; font-family: "Courier New", Courier, mono; font-size: 14px; color: rgb(18, 16, 13); max-width: 80em; max-height: 20em; overflow: auto; background-color: rgb(227, 227, 227); border: 2px solid blue;'><span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">union</span> unCoor3D {    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">struct</span> {       <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span> X, Y, Z;    };    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span> Coor[3]; } Punto;</pre>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Haci&eacute;ndolo as&iacute; accedemos a la coordenada Y de cualquiera de estas dos formas:</p>
+    <pre class="ejemplo" style='padding: 10px; margin: 0px 0px 5px; font-family: "Courier New", Courier, mono; font-size: 14px; color: rgb(18, 16, 13); max-width: 80em; max-height: 20em; overflow: auto; background-color: rgb(227, 227, 227); border: 2px solid blue;'>Punto.Y Punto.Coor[1]</pre>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Usar estructuras an&oacute;nimas dentro de una uni&oacute;n tiene la ventaja de que nos ahorramos escribir el identificador de la estructura para acceder a sus campos. Esto no s&oacute;lo es &uacute;til por el ahorro de c&oacute;digo, sino sobre todo, porque el c&oacute;digo es mucho m&aacute;s claro.</p><a name="UNI_INIT" style="padding: 0px; margin: 0px;"></a>
+</div>
+<div class="texto" style="padding: 8px; margin: 10px; background-color: rgb(192, 201, 210); border: 1px solid rgb(33, 33, 33); color: rgb(236, 236, 236); font-family: Georgia, Verdana, Tahoma, Arial, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+    <h2 style='padding: 0px 0px 0px 50px; margin: 0px; background-image: url("./estilo/h2.php?col=565d63FD6b00"); background-repeat: repeat-x; background-position: 0px 0px; height: 28px; font-size: 16px; font-weight: 600; overflow: hidden; color: rgb(179, 222, 255);'>Inicializaci&oacute;n de uniones</h2>
+    <div class="titulo_flecha" style="padding: 0px; margin: 0px;"><a href="http://c.conclase.net/curso/?cap=016#inicio" style='padding: 0px; margin: 2px 0px -21px; background-image: url("./estilo/boton_inicio.php?col=565d63FD6b00"); background-repeat: no-repeat; background-position: 0px 0px; font-weight: 100; font-size: 0px; text-decoration: none; line-height: 0px; overflow: hidden; position: relative; top: -29px; left: 5px; width: 35px; height: 23px; display: block; color: rgb(18, 16, 13);'>^</a></div>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Las uniones solo pueden ser inicializadas en su declaraci&oacute;n mediante su primer miembro.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Por ejemplo, en la primera uni&oacute;n:</p>
+    <pre class="ejemplo" style='padding: 10px; margin: 0px 0px 5px; font-family: "Courier New", Courier, mono; font-size: 14px; color: rgb(18, 16, 13); max-width: 80em; max-height: 20em; overflow: auto; background-color: rgb(227, 227, 227); border: 2px solid blue;'><span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">union</span> unEjemplo {    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span> A;    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">char</span> B;    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">double</span> C; } UnionEjemplo;</pre>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Podemos iniciar objetos de este tipo asignando un entero:</p>
+    <pre class="ejemplo" style='padding: 10px; margin: 0px 0px 5px; font-family: "Courier New", Courier, mono; font-size: 14px; color: rgb(18, 16, 13); max-width: 80em; max-height: 20em; overflow: auto; background-color: rgb(227, 227, 227); border: 2px solid blue;'>unEjemplo x = {10}; // <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span>
+unEjemplo y = {&#39;a&#39;}; // <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">char</span>
+unEjemplo z = {10.02}; // <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">double</span></pre>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Si usamos un car&aacute;cter, como en el caso de &#39;y&#39;, se har&aacute; una conversi&oacute;n de tipo a&nbsp;<b style="padding: 0px; margin: 0px;">int</b> de forma autom&aacute;tica, y se asignar&aacute; el valor correcto. En el caso de &#39;z&#39;, se produce un aviso, por democi&oacute;n autom&aacute;tica.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Quiero llamar tu atenci&oacute;n sobre el modo de inicializar uniones. Al igual que pasa con otros tipos agregados, como&nbsp;<i style="padding: 0px; margin: 0px;">arrays</i> y estructuras, hay que usar llaves para incluir una lista de valores iniciales. En el caso de la uni&oacute;n, esa lista tendr&aacute; un &uacute;nico elemento, ya que todos los miembros comparten la misma zona de memoria, y s&oacute;lo est&aacute; permitido usar el primero para las inicializaciones.</p><a name="UNI_DISCR" style="padding: 0px; margin: 0px;"></a>
+</div>
+<div class="texto" style="padding: 8px; margin: 10px; background-color: rgb(192, 201, 210); border: 1px solid rgb(33, 33, 33); color: rgb(236, 236, 236); font-family: Georgia, Verdana, Tahoma, Arial, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+    <h2 style='padding: 0px 0px 0px 50px; margin: 0px; background-image: url("./estilo/h2.php?col=565d63FD6b00"); background-repeat: repeat-x; background-position: 0px 0px; height: 28px; font-size: 16px; font-weight: 600; overflow: hidden; color: rgb(179, 222, 255);'>Discriminadores</h2>
+    <div class="titulo_flecha" style="padding: 0px; margin: 0px;"><a href="http://c.conclase.net/curso/?cap=016#inicio" style='padding: 0px; margin: 2px 0px -21px; background-image: url("./estilo/boton_inicio.php?col=565d63FD6b00"); background-repeat: no-repeat; background-position: 0px 0px; font-weight: 100; font-size: 0px; text-decoration: none; line-height: 0px; overflow: hidden; position: relative; top: -29px; left: 5px; width: 35px; height: 23px; display: block; color: rgb(18, 16, 13);'>^</a></div>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Supongamos que necesitamos almacenar en un&nbsp;<i style="padding: 0px; margin: 0px;">array</i> datos de diferentes tipos, nos importa m&aacute;s almacenarlos todos en la misma estructura. Por ejemplo, en la gesti&oacute;n de una biblioteca queremos crear una tabla que contenga, de forma indiscriminada, libros, revistas y pel&iacute;culas.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Podemos crear una uni&oacute;n, ejemplar, que contenga un elemento de cada tipo, y despu&eacute;s un&nbsp;<i style="padding: 0px; margin: 0px;">array</i> de ejemplares.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;"><br></p>
+    <pre class="ejemplo" style='padding: 10px; margin: 0px 0px 5px; font-family: "Courier New", Courier, mono; font-size: 14px; color: rgb(18, 16, 13); max-width: 80em; max-height: 20em; overflow: auto; background-color: rgb(227, 227, 227); border: 2px solid blue;'><span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">struct</span> tipoLibro {    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span> codigo;    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">char</span> autor[80];    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">char</span> titulo[80];    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">char</span> editorial[32];    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span> anno; }; 
+<span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">struct</span> tipoRevista {    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span> codigo;    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">char</span> nombre[32];    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span> mes;    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span> anno; }; 
+<span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">struct</span> tipoPelicula {    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span> codigo;    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">char</span> titulo[80];    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">char</span> director[80];    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">char</span> productora[32];    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">int</span> anno; }; 
+<span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">union</span> tipoEjemplar {    tipoLibro l;    tipoRevista r;    tipoPelicula p; }; 
+tipoEjemplar tabla[100];</pre>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Pero hay un problema, del que quiz&aacute;s ya te hayas percatado...</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Cuando accedamos a un elemento de la tabla, &iquest;c&oacute;mo sabemos si contiene un libro, una revista o una pel&iacute;cula?</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Lo que se suele hacer es a&ntilde;adir un elemento m&aacute;s que indique qu&eacute; tipo de dato contiene la uni&oacute;n. A ese elemento se le llama&nbsp;<b style="padding: 0px; margin: 0px;">discriminador</b>:</p>
+    <pre class="ejemplo" style='padding: 10px; margin: 0px 0px 5px; font-family: "Courier New", Courier, mono; font-size: 14px; color: rgb(18, 16, 13); max-width: 80em; max-height: 20em; overflow: auto; background-color: rgb(227, 227, 227); border: 2px solid blue;'><span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">enum</span> eEjemplar { libro, revista, pelicula }; 
+<span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">struct</span> tipoEjemplar {    eEjemplar tipo;    <span class="cpp" style="padding: 0px; margin: 0px; color: rgb(170, 68, 0); font-weight: bold;">union</span> {        tipoLibro l;        tipoRevista r;        tipoPelicula p;    }; };</pre>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Usando el discriminador podemos averiguar qu&eacute; tipo de publicaci&oacute;n estamos manejando, y mostrar o asignar los valores adecuados.</p><a name="UNI_FUNCIONES" style="padding: 0px; margin: 0px;"></a>
+</div>
+<div class="texto" style="padding: 8px; margin: 10px; background-color: rgb(192, 201, 210); border: 1px solid rgb(33, 33, 33); color: rgb(236, 236, 236); font-family: Georgia, Verdana, Tahoma, Arial, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+    <h2 style='padding: 0px 0px 0px 50px; margin: 0px; background-image: url("./estilo/h2.php?col=565d63FD6b00"); background-repeat: repeat-x; background-position: 0px 0px; height: 28px; font-size: 16px; font-weight: 600; overflow: hidden; color: rgb(179, 222, 255);'>Funciones dentro de uniones</h2>
+    <div class="titulo_flecha" style="padding: 0px; margin: 0px;"><a href="http://c.conclase.net/curso/?cap=016#inicio" style='padding: 0px; margin: 2px 0px -21px; background-image: url("./estilo/boton_inicio.php?col=565d63FD6b00"); background-repeat: no-repeat; background-position: 0px 0px; font-weight: 100; font-size: 0px; text-decoration: none; line-height: 0px; overflow: hidden; position: relative; top: -29px; left: 5px; width: 35px; height: 23px; display: block; color: rgb(18, 16, 13);'>^</a></div>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Como en el caso de las estructuras, en las uniones tambi&eacute;n se pueden incluir como miembros funciones,&nbsp;<i style="padding: 0px; margin: 0px;">constructores</i> y&nbsp;<i style="padding: 0px; margin: 0px;">destructores</i>.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Del mismo modo, es posible crear tantos&nbsp;<i style="padding: 0px; margin: 0px;">constructores</i> como se necesiten. En cuanto a este aspecto, las estructuras y uniones son equivalentes.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Seg&uacute;n la norma&nbsp;ANSI, todos los campos de las uniones deben ser p&uacute;blicos, y no se permiten los modificadores&nbsp;<b style="padding: 0px; margin: 0px;">private</b> y&nbsp;<b style="padding: 0px; margin: 0px;">protected</b>.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Un objeto que tenga constructor o destructor no puede ser utilizado como miembro de una uni&oacute;n. Esta limitaci&oacute;n tiene su l&oacute;gica, puesto que la memoria de cada elemento de una uni&oacute;n se comparte, no tendr&iacute;a sentido que los constructores de algunos elementos modificasen el contenido de esa memoria, ya que afectan directamente a los valores del resto de los elementos.</p>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;">Una uni&oacute;n no puede participar en la jerarqu&iacute;a de clases; no puede ser derivada de ninguna clase, ni ser una clase base. Aunque s&iacute; pueden tener un constructor y ser miembros de clases.</p><a name="UNI_RESERVADAS" style="padding: 0px; margin: 0px;"></a>
+</div>
+<div class="texto" style="padding: 8px; margin: 10px; background-color: rgb(192, 201, 210); border: 1px solid rgb(33, 33, 33); color: rgb(236, 236, 236); font-family: Georgia, Verdana, Tahoma, Arial, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+    <h2 style='padding: 0px 0px 0px 50px; margin: 0px; background-image: url("./estilo/h2.php?col=565d63FD6b00"); background-repeat: repeat-x; background-position: 0px 0px; height: 28px; font-size: 16px; font-weight: 600; overflow: hidden; color: rgb(179, 222, 255);'>Palabras reservadas usadas en este cap&iacute;tulo</h2>
+    <div class="titulo_flecha" style="padding: 0px; margin: 0px;"><a href="http://c.conclase.net/curso/?cap=016#inicio" style='padding: 0px; margin: 2px 0px -21px; background-image: url("./estilo/boton_inicio.php?col=565d63FD6b00"); background-repeat: no-repeat; background-position: 0px 0px; font-weight: 100; font-size: 0px; text-decoration: none; line-height: 0px; overflow: hidden; position: relative; top: -29px; left: 5px; width: 35px; height: 23px; display: block; color: rgb(18, 16, 13);'>^</a></div>
+    <p style="padding: 0px; margin: 0.5em 0px; font-size: 15px; color: rgb(18, 16, 13); text-align: justify;"><b style="padding: 0px; margin: 0px;">union</b>.</p>
+</div>
+<div class="texto" style="padding: 8px; margin: 10px; background-color: rgb(192, 201, 210); border: 1px solid rgb(33, 33, 33); color: rgb(236, 236, 236); font-family: Georgia, Verdana, Tahoma, Arial, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+    <h3 style='padding: 0px 0px 0px 12px; margin: 0px; background-image: url("./estilo/h3.php?col=FD6b00565d63"); background-repeat: repeat-x; background-position: 0px 0px; height: 26px; font-size: 14px; font-weight: 800; overflow: hidden; color: rgb(229, 227, 225);'>Comentarios de los usuarios (10)</h3>
+    <div style="padding: 10px; margin: 0px; background-color: rgb(71, 78, 84); border-top: 6px solid rgb(192, 201, 210);">
+        <div class="avatar" style="padding: 4px; margin: 4px; float: left; text-align: center; color: rgb(18, 16, 13); font-size: 12px; font-style: italic;"><img src="http://www.gravatar.com/avatar/36700c9479fd90de36f0c92398c7aa61?s=38&r=g" align="top" border="0" style="padding: 0px;"></div><b style="padding: 0px; margin: 0px;">Juli&aacute;n Lopera B</b><br style="padding: 0px; margin: 0px;">2013-08-04 05:33:24
+    </div>
+    <div style="padding: 0px 10px; margin: 0px; background-color: rgb(192, 201, 210); border-width: 1px 15px; border-style: solid; border-color: rgb(18, 16, 13) rgb(71, 78, 84) rgb(71, 78, 84);">
+        <p style="padding: 0px; margin: 0.5em 0px; font-size: 14px; color: rgb(18, 16, 13); text-align: justify; font-family: Georgia, Verdana, Tahoma, Arial, sans-serif;">Hola,</p>
+        <p style="padding: 0px; margin: 0.5em 0px; font-size: 14px; color: rgb(18, 16, 13); text-align: justify; font-family: Georgia, Verdana, Tahoma, Arial, sans-serif;">Estuve viendo la tan interesante informaci&oacute;n que pones sobre las uniones, y bueno, me gustar&iacute;a participar con una pregunta, tal vez sea de inter&eacute;s para muchos, espero que asi sea.</p>
+        <p style="padding: 0px; margin: 0.5em 0px; font-size: 14px; color: rgb(18, 16, 13); text-align: justify; font-family: Georgia, Verdana, Tahoma, Arial, sans-serif;">Me he topado con el siguiente c&oacute;digo.</p>
+        <pre class="ejemplo" style='padding: 10px; margin: 0px 0px 5px; font-family: "Courier New", Courier, mono; font-size: 14px; color: rgb(18, 16, 13); max-width: 80em; max-height: 20em; overflow: auto; background-color: rgb(227, 227, 227); border: 2px solid blue;'>typedef union {  byte Byte;  struct {    byte PTAD0       :1;                                       /* Port A Data Register Bit 0 */    byte PTAD1       :1;                                       /* Port A Data Register Bit 1 */    byte PTAD2       :1;                                       /* Port A Data Register Bit 2 */    byte PTAD3       :1;                                       /* Port A Data Register Bit 3 */    byte PTAD4       :1;                                       /* Port A Data Register Bit 4 */    byte PTAD5       :1;                                       /* Port A Data Register Bit 5 */    byte             :1;     byte             :1;   } Bits;  struct {    byte grpPTAD :6;    byte         :1;    byte         :1;  } MergedBits; } PTADSTR;</pre>
+    </div>
+</div>
+		  
+		  
+      </main>
+    </section>
+	  
+    <section id="panel-2">
+      <main>
+        <h1>Operadores a nivel de bits</h1>
+      		<h1 class="sol" style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'><br></h1>
+<p style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>D proporciona los siguientes operadores binarios para manipular bits individuales dentro de los operandos de n&uacute;meros enteros. Estos operadores tienen todos el mismo significado que en ANSI-C.</p>
+<p><a name="tbl-bitops" style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></a><span style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>Tabla&nbsp;2&ndash;9 Operadores a nivel de bit de D</span></p>
+<table border="2" cellpadding="10" cellspacing="0" style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;' width="100%">
+    <tbody>
+        <tr>
+            <td align="left" valign="top">
+                <p>&amp;</p>
+            </td>
+            <td align="left" valign="top">
+                <p>AND a nivel de bit&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                <p>|</p>
+            </td>
+            <td align="left" valign="top">
+                <p>OR a nivel de bit&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                <p>^</p>
+            </td>
+            <td align="left" valign="top">
+                <p>XOR a nivel de bit&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                <p>&lt;&lt;</p>
+            </td>
+            <td align="left" valign="top">
+                <p>desplaza el operando de la izquierda hacia la izquierda el n&uacute;mero de bits especificado por el operando de la derecha&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                <p>&gt;&gt;</p>
+            </td>
+            <td align="left" valign="top">
+                <p>desplaza el operando de la izquierda hacia la derecha el n&uacute;mero de bits especificado por el operando de la derecha&nbsp;</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'><br></p>
+<p style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>El operador binario&nbsp;&amp;&nbsp;se utiliza para borrar bits de un operando de n&uacute;meros enteros. El operador binario&nbsp;|&nbsp;se utiliza para definir bits en un operando de n&uacute;meros enteros. El operador binario&nbsp;^&nbsp;devuelve un uno en cada posici&oacute;n de bit donde exactamente se define uno de los bits de operando correspondiente.</p>
+<p style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>Los operadores de desplazamiento se utilizan para mover bits hacia la izquierda o derecha en un operando de n&uacute;meros enteros concreto. Si se realiza el desplazamiento hacia la izquierda, se rellenan las posiciones de bits vac&iacute;as en el lado derecho del resultado con ceros. Si se realiza el desplazamiento hacia la derecha utilizando un operando de n&uacute;meros enteros sin signo, se rellenan las posiciones de bits vac&iacute;as en el lado izquierdo del resultado con ceros. Si se realiza el desplazamiento hacia la derecha utilizando un operando de n&uacute;meros enteros con signo, rellena las posiciones de bits vac&iacute;as en el lado izquierdo del valor del bit con signo, tambi&eacute;n conocido como una operaci&oacute;n de <em>desplazamiento aritm&eacute;tico</em>.</p>
+<p style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>Si se realiza un desplazamiento de un valor de n&uacute;mero entero mediante un n&uacute;mero negativo de bits o mediante un n&uacute;mero de bits m&aacute;s grande que el n&uacute;mero de bits en el operando de la izquierda, produce un resultado no definido. El compilador de D producir&aacute; un mensaje de error si puede detectar esta condici&oacute;n cuando compila el programa D.</p>
+<p style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>Adem&aacute;s de los operadores l&oacute;gicos binarios, el operador unario ! se puede utilizar para realizar una negaci&oacute;n a nivel de bits de un &uacute;nico operando: convierte cada bit cero en el operando en un bit uno, y cada bit uno del operando en un bit cero.</p>		
+		  
+		  
+		  
+      </main>
+    </section>
+    <section id="panel-3">
+      <main>
+        <h1>Campo de bits</h1>
+
+		  <p style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>D tambi&eacute;n permite la definici&oacute;n de miembros de una uni&oacute;n o estructura de enteros de un n&uacute;mero arbitrario de bits, que se conoce como <em>campos de bits</em>. Un campo de bits se declara especificando un tipo base de entero con signo o sin &eacute;l, un nombre de miembro y un sufijo que indica el n&uacute;mero de bits que se van a asignar al campo, como se muestra en el siguiente ejemplo:</p>
+<p><a name="" style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></a></p>
+<pre style="color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">struct s {     int a : 1;     int b : 3;     int c : 12; };</pre>
+<p style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>El ancho del campo de bits es una constante de n&uacute;mero entero separada del nombre del miembro por un punto. El ancho del campo de bits debe ser positivo y debe ser un n&uacute;mero de bits inferior al ancho del tipo base de entero correspondiente. Es posible que los campos de bits m&aacute;s grandes de 64 bits no se declaren en D. Los campos de bits de D proporcionan compatibilidad y acceso a la capacidad correspondiente de ANSI-C. Normalmente, se utilizan en situaciones en las que el almacenamiento en memoria es un elemento preciado o cuando un dise&ntilde;o de estructura debe coincidir con el dise&ntilde;o de un registro de hardware.</p>
+<p style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>Un campo de bits es una construcci&oacute;n de compilador que automatiza el dise&ntilde;o de un entero y un conjunto de m&aacute;scaras para extraer los valores del miembro. Se puede obtener el mismo resultado definiendo simplemente las m&aacute;scaras y utilizando el operador&nbsp;&amp;. Los compiladores de C y D intentan empaquetar los bits de la manera m&aacute;s eficaz posible, sin embargo, pueden realizar esta operaci&oacute;n en cualquier orden o forma que deseen. Por este motivo, no se garantiza que los campos de bits produzcan dise&ntilde;os de bits id&eacute;nticos en distintas arquitecturas o compiladores. Si requiere un dise&ntilde;o de bits estable, deber&aacute; crear las m&aacute;scaras de bits y extraer los valores utilizando el operador&nbsp;&amp;.</p>
+<p style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>Se accede a un miembro de campo de bits simplemente especificando su nombre en combinaci&oacute;n con los operadores &ldquo;.&rdquo; o -&gt;, al igual que cualquier otra estructura o miembro de una uni&oacute;n. El campo de bits se asigna autom&aacute;ticamente al siguiente tipo de entero m&aacute;s grande para utilizarlo en cualquier expresi&oacute;n. Debido a que es posible que el almacenamiento del campo de bits no se alinee en un l&iacute;mite de bytes o que sea un numero exacto de bytes en tama&ntilde;o, no se debe aplicar los operadores sizeof o offsetof a un miembro de un campo de bits. El compilador de D tambi&eacute;n proh&iacute;be tomar la direcci&oacute;n de un miembro del campo de bits utilizando el operador &amp;.</p>
+		  
+		  
+		  
+		  
+      </main>
+    </section>
+    <section id="panel-5">
+      <main>
+        <h1>Campos de bits</h1>
+		
+
+      </main>
+    </section>
+    <section id="panel-4">
+      <main>
+        <h1>Constantes de enumeración</h1>
+       		
+		<p style='box-sizing: inherit; margin: 1rem 0px 0px; padding: 0px; outline-color: inherit; overflow-wrap: break-word; color: rgb(23, 23, 23); font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;'><span data-ttu-id="abb4c-103" style="box-sizing: inherit; outline-color: inherit;">Las constantes son una forma de usar nombres significativos en lugar de un valor que no cambia.</span> <span data-ttu-id="abb4c-104" style="box-sizing: inherit; outline-color: inherit;">Las constantes almacenan valores que, como su nombre indica, permanecen constantes durante la ejecuci&oacute;n de una aplicaci&oacute;n.</span> <span data-ttu-id="abb4c-105" style="box-sizing: inherit; outline-color: inherit;">Puede usar constantes para proporcionar nombres descriptivos, en lugar de n&uacute;meros, de forma que el c&oacute;digo sea m&aacute;s legible.</span></p>
+<p style='box-sizing: inherit; margin: 1rem 0px 0px; padding: 0px; outline-color: inherit; overflow-wrap: break-word; color: rgb(23, 23, 23); font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;'><span data-ttu-id="abb4c-106" style="box-sizing: inherit; outline-color: inherit;">Las enumeraciones proporcionan una forma c&oacute;moda de trabajar con conjuntos de constantes relacionadas y asociar valores constantes con nombres.</span> <span data-ttu-id="abb4c-107" style="box-sizing: inherit; outline-color: inherit;">Por ejemplo, puede declarar una enumeraci&oacute;n para un conjunto de constantes de tipo entero asociadas con los d&iacute;as de la semana y, despu&eacute;s, usar los nombres de los d&iacute;as en lugar de sus valores enteros en el c&oacute;digo.</span></p>
+<table class="table" style='box-sizing: inherit; border-collapse: collapse; border-spacing: 0px; outline-color: inherit; table-layout: auto; width: 800px; font-size: 0.875rem; color: rgb(23, 23, 23); font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;'>
+    <thead style="box-sizing: inherit; outline-color: inherit;">
+        <tr style="box-sizing: inherit; outline-color: inherit;">
+            <th style="box-sizing: inherit; padding: 0.75rem 1rem; outline-color: inherit; text-align: left; display: table-cell; overflow-wrap: break-word; line-height: 1.5; vertical-align: top; border-width: 0px 0px 1px; border-color: initial; border-top-style: initial; border-right-style: solid; border-bottom-style: initial; border-left-style: solid;"><span data-ttu-id="abb4c-116" style="box-sizing: inherit; outline-color: inherit;">T&eacute;rmino</span></th>
+            <th style="box-sizing: inherit; padding: 0.75rem 1rem; outline-color: inherit; text-align: left; display: table-cell; overflow-wrap: break-word; line-height: 1.5; vertical-align: top; border-width: 0px 0px 1px; border-color: initial; border-top-style: initial; border-right-style: solid; border-bottom-style: initial; border-left-style: solid;"><span data-ttu-id="abb4c-117" style="box-sizing: inherit; outline-color: inherit;">Definici&oacute;n</span></th>
+        </tr>
+    </thead>
+    <tbody style="box-sizing: inherit; outline-color: inherit;">
+        <tr style="box-sizing: inherit; outline-color: inherit;">
+            <td style="box-sizing: inherit; padding: 0.75rem 1rem; outline-color: inherit; text-align: left; display: table-cell; overflow-wrap: break-word; line-height: 1.5; vertical-align: top; border-top-width: ; border-top-color: ; border-right: 0px solid; border-left: 0px solid; border-bottom: 0px solid; border-top-style: solid;"><a data-linktype="relative-path" href="https://docs.microsoft.com/es-es/dotnet/visual-basic/language-reference/statements/const-statement" style="box-sizing: inherit; background-color: transparent; outline-color: inherit; color: var(--visited); cursor: pointer; text-decoration: none; overflow-wrap: break-word; outline-style: initial; outline-width: 0px;"><span data-ttu-id="abb4c-118" style="box-sizing: inherit; outline-color: inherit;">Instrucci&oacute;n Const</span></a></td>
+            <td style="box-sizing: inherit; padding: 0.75rem 1rem; outline-color: inherit; text-align: left; display: table-cell; overflow-wrap: break-word; line-height: 1.5; vertical-align: top; border-top-width: ; border-top-color: ; border-right: 0px solid; border-left: 0px solid; border-bottom: 0px solid; border-top-style: solid;"><span data-ttu-id="abb4c-119" style="box-sizing: inherit; outline-color: inherit;">Se describe la instrucci&oacute;n&nbsp;<code style='box-sizing: inherit; font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 11.9px; outline-color: inherit; direction: ltr; padding: 0.1em 0.2em; background-color: var(--body-background-dark); border-radius: 3px; overflow-wrap: break-word;'>Const</code>, que se usa para declarar constantes.</span></td>
+        </tr>
+        <tr style="box-sizing: inherit; outline-color: inherit;">
+            <td style="box-sizing: inherit; padding: 0.75rem 1rem; outline-color: inherit; text-align: left; display: table-cell; overflow-wrap: break-word; line-height: 1.5; vertical-align: top; border-top-width: ; border-top-color: ; border-right: 0px solid; border-left: 0px solid; border-bottom: 0px solid; border-top-style: solid;"><a data-linktype="relative-path" href="https://docs.microsoft.com/es-es/dotnet/visual-basic/language-reference/statements/enum-statement" style="box-sizing: inherit; background-color: transparent; outline-color: inherit; color: var(--visited); cursor: pointer; text-decoration: none; overflow-wrap: break-word; outline-style: initial; outline-width: 0px;"><span data-ttu-id="abb4c-120" style="box-sizing: inherit; outline-color: inherit;">Instrucci&oacute;n Enum</span></a></td>
+            <td style="box-sizing: inherit; padding: 0.75rem 1rem; outline-color: inherit; text-align: left; display: table-cell; overflow-wrap: break-word; line-height: 1.5; vertical-align: top; border-top-width: ; border-top-color: ; border-right: 0px solid; border-left: 0px solid; border-bottom: 0px solid; border-top-style: solid;"><span data-ttu-id="abb4c-121" style="box-sizing: inherit; outline-color: inherit;">Se describe la instrucci&oacute;n&nbsp;<code style='box-sizing: inherit; font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 11.9px; outline-color: inherit; direction: ltr; padding: 0.1em 0.2em; background-color: var(--body-background-dark); border-radius: 3px; overflow-wrap: break-word;'>Enum</code>, que se usa para crear enumeraciones.</span></td>
+        </tr>
+        <tr style="box-sizing: inherit; outline-color: inherit;">
+            <td style="box-sizing: inherit; padding: 0.75rem 1rem; outline-color: inherit; text-align: left; display: table-cell; overflow-wrap: break-word; line-height: 1.5; vertical-align: top; border-top-width: ; border-top-color: ; border-right: 0px solid; border-left: 0px solid; border-bottom: 0px solid; border-top-style: solid;"><a data-linktype="relative-path" href="https://docs.microsoft.com/es-es/dotnet/visual-basic/language-reference/statements/option-explicit-statement" style="box-sizing: inherit; background-color: transparent; outline-color: inherit; color: var(--visited); cursor: pointer; text-decoration: none; overflow-wrap: break-word; outline-style: initial; outline-width: 0px;"><span data-ttu-id="abb4c-122" style="box-sizing: inherit; outline-color: inherit;">Option Explicit (instrucci&oacute;n)</span></a></td>
+            <td style="box-sizing: inherit; padding: 0.75rem 1rem; outline-color: inherit; text-align: left; display: table-cell; overflow-wrap: break-word; line-height: 1.5; vertical-align: top; border-top-width: ; border-top-color: ; border-right: 0px solid; border-left: 0px solid; border-bottom: 0px solid; border-top-style: solid;"><span data-ttu-id="abb4c-123" style="box-sizing: inherit; outline-color: inherit;">Se describe la instrucci&oacute;n&nbsp;<code style='box-sizing: inherit; font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 11.9px; outline-color: inherit; direction: ltr; padding: 0.1em 0.2em; background-color: var(--body-background-dark); border-radius: 3px; overflow-wrap: break-word;'>Option Explicit</code>, que se usa en el nivel de m&oacute;dulo para exigir la declaraci&oacute;n expl&iacute;cita de todas las variables de ese m&oacute;dulo.</span></td>
+        </tr>
+        <tr style="box-sizing: inherit; outline-color: inherit;">
+            <td style="box-sizing: inherit; padding: 0.75rem 1rem; outline-color: inherit; text-align: left; display: table-cell; overflow-wrap: break-word; line-height: 1.5; vertical-align: top; border-top-width: ; border-top-color: ; border-right: 0px solid; border-left: 0px solid; border-bottom: 0px solid; border-top-style: solid;"><a data-linktype="relative-path" href="https://docs.microsoft.com/es-es/dotnet/visual-basic/language-reference/statements/option-infer-statement" style="box-sizing: inherit; background-color: transparent; outline-color: inherit; color: var(--visited); cursor: pointer; text-decoration: none; overflow-wrap: break-word; outline-style: initial; outline-width: 0px;"><span data-ttu-id="abb4c-124" style="box-sizing: inherit; outline-color: inherit;">Option Infer (instrucci&oacute;n)</span></a></td>
+            <td style="box-sizing: inherit; padding: 0.75rem 1rem; outline-color: inherit; text-align: left; display: table-cell; overflow-wrap: break-word; line-height: 1.5; vertical-align: top; border-top-width: ; border-top-color: ; border-right: 0px solid; border-left: 0px solid; border-bottom: 0px solid; border-top-style: solid;"><span data-ttu-id="abb4c-125" style="box-sizing: inherit; outline-color: inherit;">Se describe la instrucci&oacute;n&nbsp;<code style='box-sizing: inherit; font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 11.9px; outline-color: inherit; direction: ltr; padding: 0.1em 0.2em; background-color: var(--body-background-dark); border-radius: 3px; overflow-wrap: break-word;'>Option Infer</code>, que permite el uso de la inferencia de tipo de variable local en la declaraci&oacute;n de variables.</span></td>
+        </tr>
+        <tr style="box-sizing: inherit; outline-color: inherit;">
+            <td style="box-sizing: inherit; padding: 0.75rem 1rem; outline-color: inherit; text-align: left; display: table-cell; overflow-wrap: break-word; line-height: 1.5; vertical-align: top; border-top-width: ; border-top-color: ; border-right: 0px solid; border-left: 0px solid; border-bottom: 0px solid; border-top-style: solid;"><a data-linktype="relative-path" href="https://docs.microsoft.com/es-es/dotnet/visual-basic/language-reference/statements/option-strict-statement" style="box-sizing: inherit; background-color: transparent; outline-color: inherit; color: var(--visited); cursor: pointer; text-decoration: none; overflow-wrap: break-word; outline-style: initial; outline-width: 0px;"><span data-ttu-id="abb4c-126" style="box-sizing: inherit; outline-color: inherit;">Option Strict (instrucci&oacute;n)</span></a></td>
+            <td style="box-sizing: inherit; padding: 0.75rem 1rem; outline-color: inherit; text-align: left; display: table-cell; overflow-wrap: break-word; line-height: 1.5; vertical-align: top; border-top-width: ; border-top-color: ; border-right: 0px solid; border-left: 0px solid; border-bottom: 0px solid; border-top-style: solid;"><span data-ttu-id="abb4c-127" style="box-sizing: inherit; outline-color: inherit;">Se describe la instrucci&oacute;n&nbsp;<code style='box-sizing: inherit; font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 11.9px; outline-color: inherit; direction: ltr; padding: 0.1em 0.2em; background-color: var(--body-background-dark); border-radius: 3px; overflow-wrap: break-word;'>Option Strict</code>, que restringe las conversiones de tipos de datos impl&iacute;citos solo a conversiones de ampliaci&oacute;n, no permite el enlace en tiempo de ejecuci&oacute;n y no permite tipos impl&iacute;citos que dan como resultado un tipo&nbsp;<code style='box-sizing: inherit; font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 11.9px; outline-color: inherit; direction: ltr; padding: 0.1em 0.2em; background-color: var(--body-background-dark); border-radius: 3px; overflow-wrap: break-word;'>Object</code>.</span></td>
+        </tr>
+    </tbody>
+</table>
+      </main>
+    </section>
+	  
+	 <!-- Panel 6--> 
+	   <section id="panel-6">
+      <main>
+        <h1>Expresiones y funciones</h1>
+     
+		  
+		  
+		  
+		  
+      </main>
+    </section>
+	  
+	  
+  </div>
+</article>
+<!-- partial -->
+  
+</body>
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

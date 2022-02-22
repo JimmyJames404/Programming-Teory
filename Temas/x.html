@@ -1,0 +1,477 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Programando con MP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="style.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="../index.html" class="logo"><strong>Martin</strong> <span style="color:white;">Programing</span></a>
+						<nav>
+							<a href="#menu" style="color:white;">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="../index.html">Inicio</a></li>
+							<li><a href="../programacion.html">Programacion</a></li>
+							<li><a href="../ramas.html">Ramas</a></li>
+							<li><a href="../curiosidades.html">Curiosidades</a></li>
+							<li><a href="../motivacion.html">Motivacion</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="../tem.html" class="button fit">Aprende con Pacheco</a></li>
+							<li><a href="https://paiza.io/es" class="button primary fit">Directo a programar</a></li>
+							<li><a href="../landing.html" class="button fit">Cursos para tomar</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner 
+					<section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+								<h1>Iniciemos a pensar como programadores...</h1>
+							</header>
+							<div class="content">
+								<p>Una actividad está compuesta por dos o más tareas, a la vez que un proceso está compuesto por dos o más actividades. La interacción entre estas actividades es la que determina el desempeño del proceso, por cual para mejorar un proceso o para solucionar un problema específico, es necesario explicar el proceso.
+
+									Es ahí cuando entra el término que veremos "Diagramas de flujo".</p>
+							
+								
+					<ul class="actions">
+									<li><a href="#one" class="button next scrolly">Iniciemos</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+-->
+				<!-- Main -->
+					<body>
+<!-- partial:index.partial.html -->
+<!-- TAB CONTROLLERS -->
+<input id="panel-1-ctrl"
+       class="panel-radios" type="radio" name="tab-radios" checked>
+<input id="panel-2-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-3-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-4-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-5-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<!-- BORRAR EN CASO DE NO-->
+	<input id="panel-6-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+	<!--FIN-->
+<input id="nav-ctrl"
+       class="panel-radios" type="checkbox" name="nav-checkbox">
+
+<header id="introduction">
+  <h1>Elementos básicos de programas estructurados</h1>
+</header>
+
+<!-- TABS LIST -->
+<ul id="tabs-list">
+    <!-- MENU TOGGLE -->
+    <label id="open-nav-label" for="nav-ctrl"></label>
+    <li id="li-for-panel-1">
+      <label class="panel-label"
+             for="panel-1-ctrl">Identificadores</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-2">
+      <label class="panel-label"
+             for="panel-2-ctrl">Tipo de datos</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-3">
+      <label class="panel-label"
+             for="panel-3-ctrl">Declaración de variables</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-4">
+      <label class="panel-label"
+             for="panel-4-ctrl">Constantes</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-5" class="last">
+      <label class="panel-label"
+             for="panel-5-ctrl">Operadores</label>
+    </li>
+	<!--INLINE-BLOCK FIX 6
+ --><li id="li-for-panel-6" class="last">
+      <label class="panel-label"
+             for="panel-6-ctrl">Expresiones y funciones</label>
+    </li>
+    <label id="close-nav-label" for="nav-ctrl">Cerrar</label>
+</ul>
+
+<!-- THE PANELS -->
+<article id="panels">
+  <div class="container">
+    <section id="panel-1">
+      <main>
+        <h1>Identificadores</h1>
+       <p>Un identificador es una secuencia de caracteres, letras, dígitos y subrayados (_). que utilizamos para declarar variables, constantes o funciones.</p>
+
+<p>Reglas para usar identificadores:</p>
+		  <ul class="alt">
+																<li>* El primer carácter debe ser una letra ó un subrayado</li>
+																<li>* Los identificadores son sensibles a las letras mayúsculas y minúsculas, por lo cual los identificadores para las variables: SUMA y suma son distintos.</li>
+																<li>* En C++ el identificador puede tener cualquier longitud, sin embargo el compilador ignora cualquier carácter fuera de los 32 primeros</li>
+			  													<li>*Los identificadores no pueden ser palabras reservadas, como main, if, for, etc.</li>
+															</ul>
+
+
+
+<p>De preferencia escribir los identificadores de variables en letras minúsculas, para declarar variables primero se escribe:
+tipo de dato identificador;</p>
+<code>int x;
+int y;
+int suma;</code>
+
+<p>Escribir las constantes en mayúsculas</p>
+<code>#define PI 3.1416       //a la constante PI se le asigna el valor de 3.1416</code>
+<p>Escribir el nombre de las funciones con tipo de letra mixto: mayúsculas y minúsculas.</p>
+
+<p>Ejemplos de identificadores válidos</p>
+<ul>
+<li>suma_1;  </li>
+<li>area;</li>
+<li>TABLA;</li>
+<li>x1;</li>
+<li>Suma_Datos;</li>
+</ul>
+
+<p>Ejemplos de identificadores no válidos</p>
+<ul>
+	<li>4Numeros;</li>	
+	<li>suma-x;</li>
+	<li>$Edad;</li>
+	<li>contador!</li>
+ </ul>
+
+      </main>
+    </section>
+	  
+    <section id="panel-2">
+      <main>
+        <h1>Tipos de datos</h1>
+       <p>En programación, un tipo de dato informático o simplemente tipo es un atributo de los datos que indica al ordenador (y/o al programador) sobre la clase de datos que se va a trabajar. Esto incluye imponer restricciones en los datos, como qué valores pueden tomar y qué operaciones se pueden realizar.</p> 
+<p>Los tipos de datos comunes son: números enteros, números con signo (negativos), números de coma flotante (decimales), cadenas alfanuméricas, estados (booleano), etc.</p>
+
+<p>Algunos tipos de datos usados en C++:</p>
+
+		  <div class="table-wrapper">
+														<table class="alt">
+															<thead>
+																<tr>
+																	<th>Tipo de dato</th>
+																	<th>Tamaño en Bytes</th>
+																	<th>Contenido</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>Boolean</td>
+																	<td>1</td>
+																	<td>Verdadero(1) o falso(0)</td>
+																</tr>
+																<tr>
+																	<td>Char</td>
+																	<td>1</td>
+																	<td>Caracteres ASCII o valores asignados del -128 al 127</td>
+																</tr>
+																<tr>
+																	<td>Unsigned char, byte, uint8_t</td>
+																	<td> 1</td>
+																	<td>Caracteres ASCII o valores sin asignar del 0 al 255</td>
+																</tr>
+																<tr>
+																	<td>Int, Short</td>
+																	<td>2</td>
+																	<td>Valores entre -32,768 y 32,767</td>
+																</tr>
+																<tr>
+																	<td>Unsigned int, word,uint16_t</td>
+																	<td>2</td>
+																	<td>Valores entre 0 y 65,535</td>
+																</tr>
+																<tr>
+																	<td>Long</td>
+																	<td>4</td>
+																	<td>Valores asignados entre -2,147,483,648 y 2,147,483,647</td>
+																</tr>
+																<tr>
+																	<td>Unsigned Long uint32_t</td>
+																	<td>4</td>
+																	<td>Valores asignados entre -2,147,483,648 y 2,147,483,647</td>
+																</tr>
+															</tbody>
+															
+														</table>
+		<h2 style="color:#4F585E";>byte</h2>  <p>Byte almacena un valor numérico de 8 bits sin decimales. Tienen un rango entre 0 y 255. Sin signo.
+			 <h2 style="color:#4F585E";>int (entero)</h2> 
+Enteros son un tipo de datos primarios que almacenan valores numéricos de 16 bits sin decimales comprendidos en el rango 32,767 a -32,768.</p>
+<code>Nota: Las variables de tipo entero “int” pueden sobrepasar su valor máximo o mínimo como consecuencia de una operación. Por ejemplo, si x = 32767 y hacemos x++, entonces x pasará a ser -32.768. ¿Porque ocurre esto? → http://en.wikipedia.org/wiki/Two%27s_complement</code>
+
+
+<p>Las constantes enteras son números utilizados en el sketch, estos números son tratados como enteros, pero podemos cambiar su comportamiento.</p>
+<p>Las constantes enteras son tratadas como base 10 (Decimal), pero con una notación especial podemos cambiar su representación en otras bases.</p>
+
+<ul>
+																<li>Binario – B00001110</li>
+																<li>Octal – 0173</li>
+																<li>Hexadecimal – 0x7C3</li>
+		<li>Para forzar a formato unsigned: 78U ó 78u</li>
+	<li>Para forzar a formato long: 1000L ó 1000l</li>
+	<li>Para forzar a formato unsigned long: 2521UL ó 2521ul</li>
+															</ul>
+
+
+
+<h2 style="color:#4F585E";>long (entero largo)</h2>
+<p>El formato de variable numérica de tipo extendido “long” se refiere a números enteros (tipo 32 bits = 4 bytes) sin decimales que se encuentran dentro del rango -2147483648 a 2147483647.</p>
+
+<h2 style="color:#4F585E";>float (decimales)</h2>
+<p>El formato de dato del tipo “coma flotante” o “float” se aplica a los números con decimales. Los números de coma flotante tienen una mayor resolución que los de 32 bits que ocupa con un rango comprendido 3.4028235E+38 a -3.4028235E+38.</p>
+<p>Los números de punto flotante no son exactos, y pueden producir resultados extraños en las comparaciones. Los cálculos matemáticos de coma flotante son también mucho más lentos que los del tipo de números enteros, por lo que debe evitarse su uso si es posible. En Arduino el tipo de dato double es igual que el float.</p>
+
+<p>Las constantes de coma flotante se usan para facilitar la lectura del código, pero aunque no se use, el compilador no va a dar error y se ejecutará normalmente.</p>
+
+<ul><li>10.0 se evalúa como 10</li><li>2.34E5 ó 67e-12 (expresado en notación científica)</li></ul>
+<p>Para entenderlo mejor: la representación de coma flotante (en inglés floating point, ‘punto flotante’) es una forma de notación científica usada en las CPU, GPU, FPU, etc, con la cual se pueden representar números racionales extremadamente grandes y pequeños de una manera muy eficiente y compacta, y con la que se pueden realizar operaciones aritméticas. El estándar para la representación en coma flotante es el IEEE 754</p>
+
+<ul><li>Signo (s)  1: negativo , 0: positivo (bit 31)</li><li>Mantisa (M)  La mantisa incluye 23 bits (bit 0.. 22). Representa la parte derecha de número decimal.</li><li>Exponente (e)  El exponente incluye 8 bits (bit 23..30).</li></ul>
+
+<h2 style="color:#4F585E";>boolean</h2>
+<p>Un booleano solo tiene dos valores true y false. Cada booleano ocupa un byte de memoria.</p>
+		  
+<h2 style="color:#4F585E";>char (carácter)</h2>
+<p>Un char representa un carácter que ocupa 1 byte de memoria. Los caracteres simples se representan con comillas simples ‘a’ y para múltiples caracteres o strings se representan con comillas dobles “Hola!”.</p>
+
+<p>Recordar que los caracteres se almacenan como números usando la codificación ASCII, lo que significa que es posible hacer operaciones aritméticas con los caracteres.</p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/Q-zJEERIrkw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+		  
+		  </div>
+      </main>
+    </section>
+    <section id="panel-3">
+      <main>
+        <h1>Declaración de variables</h1>
+        <p>Podemos definir una variable, como un espacio en la memoria Ram de nuestro ordenador, donde podemos guardar información, y dependiendo del tipo de variable que nosotros necesitemos, ese espacio ocupara mas o menos tamaño en la memoria.</p>
+<p>Para poder usar una variable en un programa, previamente hay que definirla con un tipo y un identificador (es decir, un nombre para la variable). Importante tener en cuenta que en C y C++ todas las variables se deben declarar antes de su uso, si no, se producirá un error de compilación.</p>
+<p>Por ejemplo:</p>
+
+<code>int numero;</code>
+
+<p>En la linea anterior definimos una variable de tipo entero que se llama numero, seguidamente hay que añadir un punto y coma a la expresión:</p>
+
+<p>El punto y coma cumple dos funciones, la primera indicarle al compilador de C++ que esa linea ya ha terminado y la segunda transforma la expresión en una instrucción que se ejecutará en el programa.</p>
+
+<p>Cuando se llegue a esa linea, el programa reservará espacio de memoria según el tipo de variable para poder escribir y leer valores.
+</p>
+<p>A continuación se muestra un programa donde solo declara variables de tipos distintos:</p>
+
+<code>int main()
+{
+  char caracter;
+  short valor;
+  int numero;
+  long numeroMasLargo;
+  float numeroRealFloat;
+  double numeroRealDoble;
+
+  // fin
+  return 0;
+}</code>
+<p>Sin embargo declarar una cadena en C/C++ es un poco más complicado.
+</p>
+<p>Una cadena en C++ es un conjunto de caracteres, o valores de tipo char, terminados con el carácter nulo, es decir el valor numérico 0. Internamente, en el ordenador, se almacenan en posiciones consecutivas de memoria. Este tipo de estructuras recibe un tratamiento muy especial, ya que es de gran utilidad y su uso es continuo.</p>
+
+<p>La manera de definir una cadena es la siguiente:</p>
+<code>char nombre [longitud];</code>
+<p>Cuando se declara una cadena hay que tener en cuenta que tendremos que reservar una posición para almacenar el carácter nulo que indica en final de la cadena, de modo que si queremos almacenar la cadena “HOLA”, tendremos que declarar la cadena como:</p>
+
+<code>char Saludo[5];</code>
+
+<p>Las cuatro primeras posiciones se usan para almacenar los caracteres “HOLA” y la posición extra, para el carácter nulo.
+</p>
+<p>También nos será posible hacer referencia a cada uno de los caracteres individuales que componen la cadena, simplemente indicando la posición. Por ejemplo el tercer carácter de nuestra cadena de ejemplo será la ‘L’, podemos hacer referencia a él como</p>
+
+<code>Saludo[2];</code>
+<p>Es muy importante tener presente que en C++, los índices tomarán valores empezando siempre en cero, así el primer carácter de nuestra cadena sería <code>Saludo[0]</code>, que es la letra ‘H’.</p>
+
+<p>A modo de ejemplo la manera correcta de asignar una cadena es:
+</p>
+<code>char Saludo[5];
+Saludo[0] = 'H';
+Saludo[1] = 'O';
+Saludo[2] = 'L';
+Saludo[3] = 'A';
+Saludo[4] = 0;</code>
+<p>O bien:</p>
+
+<code>char Saludo[5] = "HOLA";</code>
+      </main>
+    </section>
+    <section id="panel-4">
+      <main>
+        <h1>Constante</h1>
+		  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/JuQU_iOhU0w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  <p>Una constante es un valor, una variable, que no puede ser alterado durante la ejecución del programa. Tan solo se puede leer, no se puede modificar.</p>
+<p>Por ejemplo</p>
+
+<p>Si en nuestro programa tenemos que usar el número Pi, este siempre va a ser el mismo, no va a cambiar, así que este por seguridad debería ser una constante para asegurarnos de que nunca va a cambiar.</p>
+
+<p>Cada lenguaje tiene su propia forma de definir que una variable sea constante. Por ejemplo, en C las constantes se declaran con #define. En Java por ejemplo se usa la palabra final. Mientras que en otros lenguajes como C++, JavaScript, Kotlin, C#, en todas estos se definen con la palabra const.</p>
+<p>Buenas prácticas a la hora de escribir los nombres de estas constantes</p>
+<p>Vamos a poner un ejemplo, tenemos la variable numero1 que su valor es 1. Y la variable número2 que su valor es 2. Y por último tenemos la variable número3 que su valor es la suma de la variable numero1 con la variable número2.</p>
+
+<p>Las dos primeras variables son constantes.</p>
+<p>Y la tercera, también lo es, ya que si las otras dos lo son, el valor de la suma siempre va a dar el mismo resultado ¿correcto?</p>
+
+<p>Pero las dos primeras, le estamos asignando un valor concreto, y a este tipo de constantes se las suele nombrar en mayúsculas, de este modo cada vez que te encuentres una variable en mayúsculas, sabes que es una constante.</p>
+
+
+<p>Pero, y la tercera constante</p>
+
+<p>La tercera variable, aunque también es constante, es el resultado de una operación, así que, no se considera “tan constante” esta no la pondremos en mayúsculas.</p>
+<p>Esto puede cambiar según el lenguaje, o las reglas que decidáis entre vuestro equipo, pero como normas generales se sigue esto.</p>
+
+
+
+      </main>
+    </section>
+    <section id="panel-5">
+      <main>
+        <h1>Operadores</h1>
+       <p>Los operadores son símbolos que indican cómo se deben manipular los operandos. Los operadores junto con los operandos forman una expresión, que es una fórmula que define el cálculo de un valor. Los operandos pueden ser constantes, variables o llamadas a funciones, siempre que éstas devuelvan algún valor. El compilador evalúa los operadores, algunos de izquierda a derecha, otros de derecha a izquierda, siguiendo un orden de precedencia. Este orden se puede alterar utilizando paréntesis para forzar al compilador a evaluar primero las partes que se deseen.</p>
+		  <h2 style="color:#4F585E";>	Aritméticos</h2>
+		  <h4>Alternate</h4>
+													<div class="table-wrapper">
+														<table class="alt">
+															<thead>
+																<tr>
+																	<th>Operador</th>
+																	<th>Proposito</th>
+																
+																</tr>
+															</thead>
+		  <tbody>
+																<tr>
+																	<td>+</td>
+																	<td>Adicion</td>
+																	
+																</tr>
+																<tr>
+																	<td>-</td>
+																	<td>Sustracion</td>
+																	
+																</tr>
+																<tr>
+																	<td>*</td>
+																	<td> Multiplicacion</td>
+																	
+																</tr>
+																<tr>
+																	<td>/</td>
+																	<td>Division</td>
+																	
+																</tr>
+																<tr>
+																	<td>%</td>
+																	<td>resto de división entera</td>
+																	
+																</tr>
+															</tbody>
+															
+														</table>
+														<h2 style="color:#4F585E";>Monarios</h2>
+		  <p> Son operadores que actúan sobre un sólo operando para producir un nuevo valor. En C todas las constantes numéricas son positivas. Por tanto, un número negativo es en realidad una expresión, que consiste en el operador monario menos (-), seguido de una constante numérica positiva. No debemos confundir este menos, con el de la operación de la sustracción, el cual requiere dos operandos.</p>
+ 
+<p>Otros dos operadores monarios interesantes son:</p>
+    <li>++ 	 Que es el operador incremento, hace que su operando se incremente en uno.</li>
+ <li> -- 	Que es el operador decremento, hace que el operando se decremente en uno.</li>
+														<p>Los operadores incremento y decremento pueden ser utilizados de dos formas diferentes, dependiendo de donde se escriba el operador, antes o después del operando. Si el operador precede al operando (Ej: ++i), el valor del operando se modificará antes de que se utilice con otro propósito. Si el operador sigue al operando (Ej: i--), el valor del operando se modificará después de ser utilizado.</p>
+ 
+<code>NOTA: El operador incremento y el de decremento son operadores monarios y de asignación, por tanto, en el apartado Asignación los volvemos a mencionar.
+ </code>
+ <p> Otro operador monario digno de mención es el operador de tamaño: sizeof. Éste devuelve la longitud en bytes del operando, que puede ser una variable o un especificador de tipo (en este caso, debe ir encerrado entre paréntesis).</p>
+ 
+														<h2 style="color:#4F585E";>Logicos Y Racionales</h2>
+														<p> Los operadores lógicos y relacionales tratan con valores verdaderos y falsos. Una expresión con operadores lógicos o relacionales devuelven siempre un valor verdadero o falso. El lenguaje interpreta un valor verdadero cuando es diferente de cero, y falso cuando es igual a cero. Los diferentes operadores de este tipo que existen son:
+ </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hnH_IrQ2bjE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+														<p>Los operadores tienen un orden de precedencia, pudiéndose diferenciar de mayor a menor precedencia, en caso de igualdad de precedencia todos se asocian de izquierda a derecha (excepto los monarios, los condicionales, y los de asignación, que lo hacen de derecha a izquierda), esto quiere decir que si la asociatividad es de izquierda a derecha, y se nos presentan operadores con la misma precedencia, comenzaremos a mirar los operadores más a la izquierda, e iremos avanzando hacia la derecha, dicho esto presentamos los distintos grupos de operadores:</p>
+														<code>monarios: -, ++, --, !, sizeof(tipo).
+multiplicación(*), división(/) y resto(%) aritméticos.
+suma(+), y sustracción(-) aritméticas.
+ <, <=, >, >=.
+==, !=.
+&& (AND lógico).
+|| (OR lógico).
+operador condicional (se verá posteriormente).
+operador de asignación (se verá posteriormente).</code>
+														
+      </main>
+    </section>
+	  
+	 <!-- Panel 6--> 
+	   <section id="panel-6">
+      <main>
+        <h1>Expresiones y funciones</h1>
+       <p>Una expresión es una combinación de valores y operaciones que, al ser evaluados, entregan un valor.
+</p> 
+<p>Algunos elementos que pueden formar parte de una expresión son: valores literales (como 2, "hola" o 5.7), variables, operadores y llamadas a funciones.</p>
+<p>Por ejemplo, la expresión 4 * 3 - 2 entrega el valor 10 al ser evaluada por el intérprete:
+</p>
+<code>>>> 4 * 3 - 2
+10</code>
+<p>El valor de la siguiente expresión depende del valor que tiene la variable n en el momento de la evaluación:</p>
+<code>>>> n / 7 + 5</code>
+
+<p>Una expresión está compuesta de otras expresiones, que son evaluadas recursivamente hasta llegar a sus componentes más simples, que son los literales y las variables.</p>
+		  <h2 style="color:#4F585E";>Funciones</h2>
+<p>Una función es un conjunto de líneas de código que realizan una tarea específica y puede retornar un valor. Las funciones pueden tomar parámetros que modifiquen su funcionamiento. Las funciones son utilizadas para descomponer grandes problemas en tareas simples y para implementar operaciones que son comúnmente utilizadas durante un programa y de esta manera reducir la cantidad de código. Cuando una función es invocada se le pasa el control a la misma, una vez que esta finalizó con su tarea el control es devuelto al punto desde el cual la función fue llamada.</p>
+		  <h3>Ejemplo de una función</h3>
+<p>Para comenzar, vamos a considerar el caso en el cual se desea crear la función cuadrado(), que deberá devolver el cuadrado de un número real (de punto flotante), es decir, cuadrado() aceptará números de punto flotante y regresará una respuesta como número flotante.
+</p>
+<p>Nota: aunque para la función que veremos el tipo de retorno coincide con el tipo de parámetro pasado, algunas veces las cosas pueden cambiar, es decir, no es obligatorio que una función reciba un parámetro de un tipo y que tenga que regresar una respuesta de dicho tipo.
+</p>
+<code>// regresar el cuadrado de un número
+double Cuadrado(double n)
+{
+    return n*n;
+}</code>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vLZymLKd6Mo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </main>
+    </section>
+	  
+	  
+  </div>
+</article>
+<!-- partial -->
+  
+</body>
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
